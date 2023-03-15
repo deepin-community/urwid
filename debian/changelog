@@ -1,5 +1,483 @@
-template-repository (1.0-1) unstable; urgency=medium
+urwid (2.1.2-4) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster (oldstable)
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Sun, 27 Nov 2022 17:47:30 +0000
+
+urwid (2.1.2-3) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch to fix FTBFS with Python 3.11 (Closes: #1023914)
+  * Use dh-sequences
+  * Move package description to source package
+  * Bump policy version (no changes)
+  * Drop old Break/Replaces (version in oldstable)
+  * Make copyright machine readable
+  * Simplify d/rules
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Fri, 18 Nov 2022 12:07:45 +0100
+
+urwid (2.1.2-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Gordon Ball ]
+  * Fix github tarball pattern in d/watch
+
+  [ Debian Janitor ]
+  * Use secure URI in Homepage field.
+  * Update standards version to 4.5.1, no changes needed.
+
+ -- Gordon Ball <gordon@chronitis.net>  Sun, 10 Oct 2021 19:47:01 +0000
+
+urwid (2.1.2-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Update Maintainer field with new Debian Python Team
+    contact address.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Gordon Ball ]
+  * d/watch: use github upstream
+  * New upstream version 2.1.2
+  * Rebase patches, drop upstreamed
+  * d/control: Rules-Requires-Root: no
+
+ -- Gordon Ball <gordon@chronitis.net>  Fri, 11 Dec 2020 16:41:17 +0000
+
+urwid (2.1.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream version 2.1.1
+  * Drop patch (merged upstream)
+  * bump policy and debhelper versions
+  * Add patch for new Sphinx (Closes: #963658)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Sun, 09 Aug 2020 17:14:29 +0200
+
+urwid (2.1.0-4) unstable; urgency=medium
+
+  * Team upload.
+  * Add patch in case setlocal fails (Closes: #963315)
+
+ -- Jochen Sprickerhof <jspricke@debian.org>  Thu, 02 Jul 2020 23:13:26 +0200
+
+urwid (2.1.0-3) unstable; urgency=medium
+
+  * Fix SyntaxWarning: "is not" with a literal (Closes: #963110).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Fri, 19 Jun 2020 09:23:41 +0200
+
+urwid (2.1.0-2) unstable; urgency=medium
+
+  [ Matthias Klose ]
+  * Build-depend on locales-all to fix FTBFS (Closes: #959619).
+
+ -- Andrej Shadura <andrewsh@debian.org>  Fri, 19 Jun 2020 00:05:40 +0200
+
+urwid (2.1.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump Python dependency.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Name,
+    Repository, Repository-Browse.
+
+ -- Andrej Shadura <andrewsh@debian.org>  Wed, 22 Apr 2020 23:06:03 +0200
+
+urwid (2.0.1-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Remove ancient X-Python-Version field
+  * d/control: Remove ancient X-Python3-Version field
+  * Convert git repository from git-dpm to gbp layout
+  * Use 'python3 -m sphinx' instead of sphinx-build for building docs
+  * Use debhelper-compat instead of debian/compat.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Add missing colon in closes line.
+
+  [ Sandro Tosi ]
+  * Drop python2 support; Closes: #938759
+
+ -- Sandro Tosi <morph@debian.org>  Sun, 22 Mar 2020 21:58:15 -0400
+
+urwid (2.0.1-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * d/changelog: Remove trailing whitespaces
+
+  [ Sophie Brun ]
+  * debian/control: add Breaks field for new package python-urwid-doc (Closes:
+    #892877)
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 12 Mar 2018 23:07:39 +0100
+
+urwid (2.0.1-1) unstable; urgency=low
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * Fixed VCS URL (https)
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Sophie Brun ]
+  * New upstream version 2.0.1 (Closes: #853013, #574737)
+  * Update Homepage (Closes: #814457)
+  * Remove useless dependency python-gobject (Closes: #890174)
+  * Add autopkgtest-pkg-python
+  * Create a separated package for documentation
+  * Add hardening=+all in debian/rules
+  * Bump Standards-version to 4.1.3 (no change required)
+  * Use debhelper 11
+
+  [ Raphaël Hertzog ]
+  * Add dh-python to Build-Depends
+  * Fix python3-urwid's Provides field to include ${python3:Provides}
+
+ -- Sophie Brun <sophie@freexian.com>  Tue, 06 Mar 2018 14:39:24 +0100
+
+urwid (1.3.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Merge SVN-Git Migration changes (VCS-* fields)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 03 Nov 2015 10:03:26 +0100
+
+urwid (1.3.1-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 03 Nov 2015 09:53:38 +0100
+
+urwid (1.3.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Skip vterm test suite.
+    - it is FTBFS in armel, mipsel, s390x, hppa, hurd,
+      ppc64, and maybe more, in a random way, rebuild
+      makes tests pass.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Mon, 05 Oct 2015 14:38:54 +0200
+
+urwid (1.3.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * Refactor rules file to use pybuild.
+  * Remove cdbs to build.
+  * New upstream release. (Closes: #789767)
+  * watch file: use pypi debian redirectory
+  * Bump compat level to 9
+  * Update standard version to 3.9.6, no changes required.
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Tue, 15 Sep 2015 16:04:33 +0200
+
+urwid (1.2.1-2) unstable; urgency=medium
+
+  * Team upload.
+  * Skip vterm test suite. (Closes: #743685)
+
+ -- Vincent Cheng <vcheng@debian.org>  Sun, 18 May 2014 02:07:47 -0700
+
+urwid (1.2.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Robie Basak ]
+  * Do not run tests if DEB_BUILD_OPTIONS specifies "nocheck".
+    (Closes: #651648)
+  * Run tests against all built Python versions. (Closes: #658585)
+
+  [ Vincent Cheng ]
+  * New upstream release.
+    - Fix false failures of event loop tests. (Closes: #743118)
+  * Update watch file.
+
+ -- Vincent Cheng <vcheng@debian.org>  Fri, 04 Apr 2014 09:51:00 -0700
+
+urwid (1.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release. (Closes: #733828)
+    - Drop 001_fix_event_loop_arch_build_errors.patch, no longer seems to be
+      necessary for tests to pass.
+  * Remove Gustavo Franco <stratus@debian.org> from Uploaders.
+    (Closes: #729406)
+  * Update Standards version to 3.9.5, no changes required.
+
+ -- Vincent Cheng <vcheng@debian.org>  Tue, 11 Mar 2014 22:09:44 -0700
+
+urwid (1.1.1-1) unstable; urgency=low
+
+  * Team upload
+  * Upload to unstable
+
+  [ Dmitrijs Ledkovs ]
+  * Fix debian/rules to support builds with multiple python3 versions
+    (Closes: #692383)
+
+  [ Jakub Wilk ]
+  * Use canonical URIs for Vcs-* fields.
+
+  [ Scott Kitterman ]
+  * New upstream release
+    - Refreshed debian/patches/001_fix_event_loop_arch_build_errors.patch
+
+ -- Scott Kitterman <scott@kitterman.com>  Wed, 22 May 2013 09:22:00 -0400
+
+urwid (1.1.0-1) experimental; urgency=low
+
+  [ Piotr Ożarowski ]
+  * Remove urwid.egg-info dir and .so files in clean target
+
+  [ Ian Ward ]
+  * New upstream release
+  * documentation now built with sphinx
+  * examples moved to examples/ directory
+
+ -- Ian Ward <ian@excess.org>  Fri, 02 Nov 2012 00:49:26 +0000
+
+urwid (1.0.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ian Ward <ian@excess.org>  Fri, 13 Jul 2012 21:56:33 +0000
+
+urwid (1.0.1-2) unstable; urgency=low
+
+  * generate python3 package as well, closes: #640127
+
+ -- Ian Ward <ian@excess.org>  Sun, 11 Dec 2011 02:02:03 +0000
+
+urwid (1.0.1-1) unstable; urgency=low
+
+  * New upstream release
+  * remove vterm patch (included upstream)
+
+ -- Ian Ward <ian@excess.org>  Sat, 10 Dec 2011 20:38:55 +0000
+
+urwid (1.0.0-4) unstable; urgency=low
+
+  * workaround for doctest ELLIPSIS bug
+
+ -- Ian Ward <ian@excess.org>  Fri, 28 Oct 2011 16:35:26 +0000
+
+urwid (1.0.0-3) unstable; urgency=low
+
+  [ Ian Ward ]
+  * patch for vterm.py in kfreebsd
+
+  [ Piotr Ożarowski ]
+  * source package format changed to 3.0 (quilt)
+
+ -- Ian Ward <ian@excess.org>  Tue, 25 Oct 2011 00:35:22 +0000
+
+urwid (1.0.0-2) unstable; urgency=low
+
+  * fix for event_loop arch test failures
+
+ -- Ian Ward <ian@excess.org>  Thu, 20 Oct 2011 20:40:38 +0000
+
+urwid (1.0.0-1) unstable; urgency=low
+
+  * New upstream release
+  * transition to dh_python2
+  * tests moved to 'setup.py test'
+  * new example programs
+
+ -- Ian Ward <ian@excess.org>  Sun, 16 Oct 2011 02:10:25 +0000
+
+urwid (0.9.9.2-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ian Ward <ian@excess.org>  Sat, 16 Jul 2011 01:02:39 +0000
+
+urwid (0.9.9.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Closes: #565162
+  * fix_attrwrap_doctests patch no longer required
+
+ -- Ian Ward <ian@excess.org>  Mon, 25 Jan 2010 12:57:53 +0000
+
+urwid (0.9.9-2) unstable; urgency=low
+
+  * fix for failing doctest under powerpc
+  * add palette_test.py to examples (new example program)
+
+ -- Ian Ward <ian@excess.org>  Tue, 24 Nov 2009 20:58:49 +0000
+
+urwid (0.9.9-1) unstable; urgency=low
+
+  * New upstream release
+  * Build-Depends python-gobject and python-twisted for doctests
+    of GLibEventLoop and TwistedEventLoop to pass
+
+ -- Ian Ward <ian@excess.org>  Wed, 18 Nov 2009 04:06:23 +0000
+
+urwid (0.9.8.4-1) unstable; urgency=low
+
+  * New upstream release
+
+ -- Ian Ward <ian@excess.org>  Sat, 14 Mar 2009 00:30:33 +0000
+
+urwid (0.9.8.3-2) unstable; urgency=low
+
+  [ Sandro Tosi ]
+  * debian/control
+    - switch Vcs-Browser field to viewsvn
+
+  [ Emilio Pozuelo Monfort ]
+  * debian/rules: Don't rely on python-support internals. Thanks
+    Josselin Mouette. Closes: #517312.
+
+ -- Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>  Fri, 27 Feb 2009 00:25:06 +0100
+
+urwid (0.9.8.3-1) unstable; urgency=low
+
+  [ Ian Ward ]
+  * New upstream release
+
+  [ Piotr Ożarowski ]
+  * Standards-Version bumped to 3.8.0 (no changes needed)
+
+ -- Ian Ward <ian@excess.org>  Wed, 16 Jul 2008 21:23:51 +0000
+
+urwid (0.9.8.2-1) unstable; urgency=low
+
+  [ Ian Ward ]
+  * New upstream release
+  * fix for lintian error build-depends: python-setuptools (>= 0.6b3-1)
+  * Bump Standards-Version (no changes)
+  * Remove Paul Wise from Uploaders (Thanks for your help!)
+
+  [ Piotr Ożarowski ]
+  * Homepage field added
+  * Rename XS-Vcs-* fields to Vcs-* (dpkg supports them now)
+
+  [ Sandro Tosi ]
+  * debian/control
+    - uniforming Vcs-Browser field
+
+ -- Ian Ward <ian@excess.org>  Mon, 19 May 2008 18:13:22 +0000
+
+urwid (0.9.8.1-1) unstable; urgency=low
+
+  * New upstream release
+  * Closes: #421546
+
+ -- Ian Ward <ian@excess.org>  Thu, 21 Jun 2007 13:03:32 +0000
+
+urwid (0.9.8-3) unstable; urgency=low
+
+  [ Piotr Ożarowski ]
+  * New python-support handles egg's directory name correctly
+    - bump python-support required version
+    - remove mv part from debian/rules
+    - Closes: #423984
+
+  [ Paul Wise ]
+  * Change my email address now that I'm a Debian Developer
+
+ -- Paul Wise <pabs@debian.org>  Sun, 10 Jun 2007 22:26:52 +0100
+
+urwid (0.9.8-2) unstable; urgency=low
+
+  * move to unstable
+
+ -- Ian Ward <ian@excess.org>  Sat, 14 Apr 2007 14:03:42 +0000
+
+urwid (0.9.8-1) experimental; urgency=low
+
+  * New upstream release
+  * No longer arch-indep, adjust dependencies
+
+ -- Ian Ward <ian@excess.org>  Sun, 25 Mar 2007 17:06:42 +0000
+
+urwid (0.9.7.2-1) experimental; urgency=low
+
+  [ Piotr Ozarowski ]
+  * Added XS-Vcs-Svn field
+
+  [ Ian Ward ]
+  * New upstream release (Closes: #402523)
+
+ -- Ian Ward <ian@excess.org>  Fri,  5 Jan 2007 04:36:20 +0000
+
+urwid (0.9.7.1-1) unstable; urgency=low
+
+  * New upstream release
+    - add new example bigtext.py to debian/examples
+  * Add depends on setuptools
+  * Remove -py2.4 from .egg-info directory
+
+ -- Ian Ward <ian@excess.org>  Wed,  4 Oct 2006 01:56:11 +0000
+
+urwid (0.9.6-2) unstable; urgency=low
+
+  * Don't test all python versions in debian/rules. (Closes: #384714)
+
+ -- Ian Ward <ian@excess.org>  Sun, 27 Aug 2006 03:46:53 +0000
+
+urwid (0.9.6-1) unstable; urgency=low
+
+  * New upstream release
+    - Supports rxvt HOME and END keys (Closes: #382991)
+    - docgen_tutorial.py now requires a parameter when run
+  * urwid requires python >= 2.1, add debian/pyversions
+  * Move python-support to build-depends
+  * Remove Duild-Depends-Indep on python-all
+
+ -- Ian Ward <ian@excess.org>  Wed, 23 Aug 2006 22:47:04 -0400
+
+urwid (0.9.5-1) unstable; urgency=low
+
+  * New upstream release
+    - add new example graph.py to debian/examples
+  * Build the tutorial and Build-Depend on python-templayer
+  * Don't use XS-Python-Version and XB-Python-Version
+  * Move python to Build-Depends
+  * Only build the docs and run the tests once
+  * CDBS cleans *.pyc files, don't do that
+  * Remove the whole build directory on clean
+  * Place the Debian packaging in the public domain
+  * Bump debhelper Build-Dep to 5.0.37.2
+  * Bump python-support Build-Dep to 0.3
+  * Add a debian/pycompat file
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sun, 16 Jul 2006 00:04:10 +0800
+
+urwid (0.9.4-1) unstable; urgency=low
+
+  * New upstream release
+    - Drop fix_shebangs (fixed upstream) and dpatch build-dep
+    - Do not generate or install the tutorial yet (no templayer)
+    - Drop README.Source, since we now have source for everything
+  * Generate and install reference.html
+  * Update for new Python Policy (Closes: #373403)
+  * Conflict/replace upstream packages
+  * Bump Standards-Version (no changes)
+  * Move debhelper and cdbs to Build-Depends (needed on clean)
+  * Add executable bits to the .py files since they have shebangs
+  * Add Ian Ward (upstream) to Uploaders, he will co-maintain it
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Thu, 15 Jun 2006 19:10:29 +0800
+
+urwid (0.9.3.dfsg.1-1) unstable; urgency=low
+
+  * Repack the tarball to remove the html files (no source code yet)
+  * Don't install the html files
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Sun, 23 Apr 2006 23:46:49 +0800
+
+urwid (0.9.3-1) unstable; urgency=low
+
+  * Initial release. Closes: #341344
+
+ -- Paul Wise <pabs3@bonedaddy.net>  Tue, 28 Mar 2006 18:07:55 +0800
