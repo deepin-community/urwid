@@ -8,11 +8,16 @@ Build-Depends:
  dh-sequence-python3,
  dh-sequence-sphinxdoc,
  locales-all,
+ pybuild-plugin-pyproject,
  python3-twisted,
+ python3-typing-extensions,
  python3-all-dev,
  python3-setuptools,
- python3-sphinx
-Standards-Version: 4.6.1
+ python3-sphinx,
+ python3-setuptools,
+ python3-setuptools-scm,
+ python3-wcwidth,
+Standards-Version: 4.7.0
 Homepage: https://urwid.org/
 Vcs-Git: https://salsa.debian.org/python-team/packages/urwid.git
 Vcs-Browser: https://salsa.debian.org/python-team/packages/urwid
@@ -49,6 +54,7 @@ Package: python-urwid-doc
 Architecture: all
 Section: doc
 Depends: ${misc:Depends}, ${sphinxdoc:Depends}
+Built-Using: ${sphinxdoc:Built-Using}
 Multi-Arch: foreign
 Description: ${source:Synopsis} (common documentation)
  ${source:Extended-Description}

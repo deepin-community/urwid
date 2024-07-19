@@ -1,6 +1,10 @@
 #!/usr/bin/env python
 
-import real_browse
+from __future__ import annotations
+
 import os
-os.chdir('/usr/share/doc/python')
+
+import real_browse
+
+os.chdir("/usr/share/doc/python3")
 real_browse.main()
