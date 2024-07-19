@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-#
 # Urwid setup.py exports the useful bits
 #    Copyright (C) 2004-2014  Ian Ward
 #
@@ -17,75 +15,19 @@
 #    License along with this library; if not, write to the Free Software
 #    Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 #
-# Urwid web site: http://excess.org/urwid/
+# Urwid web site: https://urwid.org/
 
-try:
-    PYTHON3 = not str is bytes
-except NameError:
-    PYTHON3 = False
+from __future__ import annotations
 
-try:
-    from setuptools import setup, Extension # distribute required for Python 3
-    have_setuptools = True
-except ImportError:
-    if PYTHON3:
-        raise
-    from distutils.core import setup, Extension
-    have_setuptools = False
+from setuptools import setup
 
-import os
-
-exec(open(os.path.join("urwid","version.py")).read())
-release = __version__
-
-setup_d = {
-    'name':"urwid",
-    'version':release,
-    'author':"Ian Ward",
-    'author_email':"ian@excess.org",
-    'ext_modules':[Extension('urwid.str_util', sources=['source/str_util.c'])],
-    'packages':['urwid', 'urwid.tests'],
-    'url':"http://urwid.org/",
-    'license':"LGPL",
-    'keywords':"curses ui widget scroll listbox user interface text layout console ncurses",
-    'platforms':"unix-like",
-    'description': "A full-featured console (xterm et al.) user interface library",
-    'long_description':open("README.rst").read().split('.. content-start\n',1)[1],
-    'classifiers':[
-        "Development Status :: 5 - Production/Stable",
-        "Environment :: Console",
-        "Environment :: Console :: Curses",
-        "Intended Audience :: Developers",
-        "License :: OSI Approved :: GNU Library or Lesser General Public License (LGPL)",
-        "Operating System :: POSIX",
-        "Operating System :: Unix",
-        "Operating System :: MacOS :: MacOS X",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        "Topic :: Software Development :: Widget Sets",
-        "Programming Language :: Python :: 2",
-        "Programming Language :: Python :: 2.7",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.7",
-        "Programming Language :: Python :: 3.8",
-        "Programming Language :: Python :: Implementation :: PyPy",
-        ],
-     }
-
-if have_setuptools:
-    setup_d['zip_safe'] = False
-    setup_d['test_suite'] = 'urwid.tests'
-
-if __name__ == "__main__":
-    try:
-        setup(**setup_d)
-    except (IOError, SystemExit) as e:
-        import sys
-        if "test" in sys.argv:
-            raise
-        import traceback
-        traceback.print_exc()
-        print("Couldn't build the extension module, trying without it...")
-        del setup_d["ext_modules"]
-        setup(**setup_d)
+setup(
+    name="urwid",
+    url="https://urwid.org/",
+    python_requires=">3.7",
+    setup_requires=[
+        "setuptools >= 61.0.0",
+        "setuptools_scm[toml]>=7.0",
+        "wheel",
+    ],
+)

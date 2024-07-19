@@ -1,3 +1,3 @@
 version=4
 opts=uversionmangle=s/(rc|a|b|c)/~$1/ \
-https://github.com/urwid/urwid/tags .*/release-@ANY_VERSION@@ARCHIVE_EXT@
+https://github.com/urwid/urwid/tags .*/(\d[\-+\.:\~\d]*)@ARCHIVE_EXT@

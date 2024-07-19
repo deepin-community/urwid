@@ -1,0 +1,14 @@
+--- a/docs/conf.py
++++ b/docs/conf.py
+@@ -31,10 +31,9 @@ extensions = [
+     "sphinx.ext.todo",
+     "sphinx.ext.coverage",
+     "sphinx.ext.githubpages",
+-    "sphinx_github_changelog",
+ ]
+ 
+-sphinx_github_changelog_token = os.environ.get("SPHINX_GITHUB_CHANGELOG_TOKEN")
++#sphinx_github_changelog_token = os.environ.get("SPHINX_GITHUB_CHANGELOG_TOKEN")
+ 
+ 
+ # Add any paths that contain templates here, relative to this directory.
